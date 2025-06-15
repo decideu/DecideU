@@ -1,0 +1,263 @@
+/* 
+  Decide U
+  Iniciar css
+  Guerrero Castro Blanca Teresita
+  Cibrian Castro Ana Cristina
+  Vega Escalante Romina
+  Última actualización: 14/06/2025
+*/
+/* Fuente importada desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset general para eliminar márgenes y rellenos
+   de todos los elementos y usar border-box
+   para un mejor control de tamaños */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Fondo con degradado suave horizontal */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* ocupa toda la altura de la ventana */
+    background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+    padding: 20px; /* evita que se pegue a los bordes en móviles */
+}
+/* Contenedor principal del formulario */
+.container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex; /* Para futuras adaptaciones internas */
+}
+/* Caja donde va el formulario (login o registro) */
+.form-box {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    z-index: 1;
+    transition: 0.6s ease-in-out 1.2s, visibility 0s 1s;
+    padding: 20px;
+}
+/* Cuando el contenedor tiene clase 'active',  se mueve el formulario a la izquierda */
+.container.active .form-box {
+    right: 50%;
+}
+/* Oculta visualmente el formulario de registro */
+.form-box.registro {
+    visibility: hidden;
+}
+/* Muestra el formulario de registro cuando se activa el contenedor */
+.container.active .form-box.registro {
+    visibility: visible;
+}
+/* Ajustes generales del formulario */
+form {
+    width: 100%;
+}
+/* Título principal del formulario */
+.container h1 {
+    font-size: 36px;
+    margin: -10px 0;
+}
+/* Estilo de cada grupo de entrada de datos */
+.input-box {
+    position: relative;
+    margin: 5px;
+}
+/* Campo de entrada (email, password, etc.) */
+.input-box input {
+    width: 100%;
+    padding: 13px 50px 13px 30px; /* espacio para icono */
+    background-color: #eee;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+/* Icono al lado derecho del campo de entrada */
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #888;
+}
+/* Botón principal de enviar */
+.btn {
+    width: 100%;
+    height: 48px;
+    background-color: #8f99b9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+/* Fondo decorativo animado en forma de óvalo que cambia de posición al alternar formularios */
+.toggle-box::before {
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    background-color: #0a0427;
+    border-radius: 150px;
+    z-index: 2;
+    transition: 1.8s ease-in-out;
+}
+/* Se mueve al centro al activar el formulario */
+.container.active .toggle-box::before {
+    left: 50%;
+}
+/* Paneles izquierdo/derecho con mensajes que aparecen a los lados del formulario */
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    z-index: 2;
+    transition: 0.6s ease-in-out;
+}
+/* Panel izquierdo con mensaje de registro */
+.toggle-panel.toggle-left {
+    left: 0;
+    line-height: 2.3;
+    transition-delay: 1.2s;
+}
+/* Al estar activo, oculta el panel izquierdo */
+.container.active .toggle-panel.toggle-left {
+    left: -50%;
+    transition-delay: 0.6s;
+}
+/* Panel derecho con mensaje de login */
+.toggle-panel.toggle-right {
+    right: -50%;
+    line-height: 2.3;
+    transition-delay: 0.6s;
+}
+/* Muestra el panel derecho cuando está activo */
+.container.active .toggle-panel.toggle-right {
+    right: 0;
+    transition-delay: 1.2s;
+}
+/* Botón dentro de los paneles */
+.toggle-panel .btn {
+    width: 160px;
+    height: 46px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    box-shadow: none;
+}
+/* Mensaje de error cuando el login falla */
+.mensaje-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #f5c6cb;
+    width: 100%;
+}
+/* Botón flotante para cerrar formulario */
+.cerrar-btn {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 999;
+    font-size: 28px;
+    color: white;
+    background-color: #8f99b9;
+    border-radius: 50%;
+    padding: 8px 12px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.cerrar-btn:hover {
+    background-color: #7c86a8;
+    transform: scale(1.1);
+}
+/* Responsividad para adaptaciones a tablets y móviles */
+/* Para tablets y pantallas medianas */
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+    .form-box,
+    .toggle-panel {
+        width: 100%;
+        position: relative;
+        right: 0 !important;
+        left: 0 !important;
+        height: auto;
+        padding: 30px 20px;
+        transition: none;
+    }
+    .form-box.registro {
+        visibility: visible !important;
+    }
+    .toggle-box::before {
+        display: none;
+    }
+    .container.active .form-box {
+        right: 0;
+    }
+    .container.active .toggle-panel.toggle-left,
+    .container.active .toggle-panel.toggle-right {
+        position: relative;
+    }
+}
+/* Para celulares pequeños */
+@media (max-width: 600px) {
+    .container h1 {
+        font-size: 26px;
+    }
+    .input-box input {
+        font-size: 14px;
+        padding: 12px 40px 12px 25px;
+    }
+    .input-box i {
+        font-size: 24px;
+        right: 15px;
+    }
+    .btn {
+        font-size: 15px;
+        height: 44px;
+    }
+    .toggle-panel .btn {
+        width: 140px;
+        height: 40px;
+    }
+    .cerrar-btn {
+        font-size: 24px;
+        padding: 6px 10px;
+    }
+}

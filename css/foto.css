@@ -1,0 +1,278 @@
+/* 
+  Decide U
+  Perfil css
+  Guerrero Castro Blanca Teresita
+  Cibrian Castro Ana Cristina
+  Vega Escalante Romina
+  Última actualización: 14/06/2025
+*/
+/* Fondo del perfil con imagen centrada y cobertura total */
+.fondoperfil {
+    background-image: url('../img/fondoperfil.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* Contenedor principal horizontal */
+.perfil-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 1200px;
+    width: 100%;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    flex-direction: row;
+    text-align: left;
+}
+/* Sección izquierda: perfil del usuario */
+.profile-top {
+    flex: 1;
+    min-width: 260px;
+    text-align: center;
+}
+/* Imagen circular */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+/* Nombre del perfil */
+.profile-name {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+/* Botón de carga */
+.upload-button {
+    margin-top: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+/* Botón de editar perfil */
+.edit-button {
+    display: inline-block;
+    margin-top: 12px;
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+.edit-button:hover {
+    background-color: #218838;
+}
+/* Ocultar input tipo file */
+input[type="file"] {
+    display: none;
+}
+/* Botón de archivo personalizado */
+.custom-file-upload {
+    margin-top: 15px;
+    display: inline-block;
+    background-color: #6c757d;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* Sección derecha: resultados del usuario */
+.profile-results {
+    flex: 2;
+    min-width: 400px;
+}
+/* Contenedor de resultados con scroll vertical */
+.sectionres {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: 280px;
+    overflow-y: auto;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* Título dentro del contenedor */
+.sectionres h2 {
+    color: black;
+    border-bottom: 2px solid black;
+}
+/* Tabla de resultados */
+.sectionres table {
+    color: black;
+    font-size: 15px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.sectionres thead {
+    background-color: #ddd;
+}
+.sectionres tbody tr:nth-child(even) {
+    background-color: #bebec0;
+}
+.sectionres tbody tr:nth-child(odd) {
+    background-color: white;
+}
+.sectionres th,
+.sectionres td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #bebec0;
+    color: black;
+}
+/* Estilo general del formulario de edición */
+.editar-form {
+    margin-top: 20px;                          /* Espacio superior para separación del contenido */
+    width: 100%;                               /* Ocupa todo el ancho del contenedor padre */
+    max-width: 400px;                          /* Máximo ancho para mantenerlo compacto y centrado */
+    margin-left: auto;                         /* Centrado horizontal */
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.1);   /* Fondo semitransparente (efecto glass ligero) */
+    padding: 20px;
+    border-radius: 12px; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+}
+/* Contenedor de cada grupo de campos (etiqueta + input) */
+.form-group {
+    margin-bottom: 16px;       /* Espacio inferior entre grupos */
+    text-align: left;          /* Alineación del texto (etiquetas) hacia la izquierda */
+}
+/* Etiquetas de los inputs (nombre, apellido, etc.) */
+.form-group label {
+    display: block;            /* Ocupan toda la línea */
+    margin-bottom: 6px;        /* Espacio entre la etiqueta y el input */
+    font-weight: bold;         /* Negrita para mejor visibilidad */
+    color: white;              /* Color blanco para fondos oscuros o coloridos */
+}
+/* Inputs de texto y contraseña con estilo moderno */
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;                             /* Ancho completo del grupo */
+    padding: 10px 12px;                      /* Espacio interno cómodo */
+    border: none;                            /* Sin borde por defecto */
+    border-radius: 8px;                      /* Bordes redondeados */
+    background-color: #f8f9fa;               /* Fondo gris muy claro */
+    font-size: 15px;                         /* Tamaño de texto cómodo y accesible */
+    color: #333;                             /* Color de texto gris oscuro para buena legibilidad */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para efecto flotante sutil */
+}
+/* Efecto visual cuando el usuario hace clic en un input */
+.form-group input:focus {
+    outline: none;                   /* Elimina el borde azul predeterminado */
+    border: 2px solid #007bff;       /* Borde azul personalizado al enfocar */
+    background-color: #fff;          /* Cambia el fondo a blanco para mejor contraste */
+}
+/* Estilo del mensaje superior de estado del formulario (exito o error) */
+.mensaje-perfil {
+    text-align: center; 
+    margin-top: 15px; 
+    font-weight: bold;  
+    color: #fff;
+    background-color: rgba(0, 123, 255, 0.3);
+    padding: 10px; 
+    border-radius: 8px; 
+}
+/* Botón de cerrar sesión */
+.logout-wrapper {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.logout-button {
+    padding: 10px 24px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.logout-button:hover {
+    background-color: #c82333;
+}
+/* Media Queries: Adaptación Responsiva */
+@media (max-width: 480px) {
+    .editar-form {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+/* Pantallas menores a 1024px: reduce tamaño y ajusta distribución */
+@media screen and (max-width: 1024px) {
+    .perfil-contenido {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .profile-results {
+        min-width: 100%;
+    }
+    .sectionres {
+        max-height: none;
+    }
+}
+/* Pantallas menores a 768px: para tablets pequeñas y móviles grandes */
+@media screen and (max-width: 768px) {
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    .profile-name {
+        font-size: 20px;
+    }
+    .upload-button,
+    .custom-file-upload {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+    .perfil-contenido {
+        padding: 20px;
+        gap: 20px;
+    }
+    .sectionres table {
+        font-size: 14px;
+    }
+}
+/* Móviles pequeños (menores a 480px): optimización completa */
+@media screen and (max-width: 480px) {
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+    .profile-name {
+        font-size: 18px;
+    }
+    .logout-button {
+        width: 100%;
+        font-size: 15px;
+    }
+    .sectionres th,
+    .sectionres td {
+        font-size: 13px;
+    }
+}

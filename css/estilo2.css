@@ -1,0 +1,201 @@
+/* 
+  Decide U
+  Estilo 2 css
+  Guerrero Castro Blanca Teresita
+  Cibrian Castro Ana Cristina
+  Vega Escalante Romina
+  Última actualización: 14/06/2025
+*/
+/* Reset general de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Ajuste base de HTML y Body */
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* SECCIONES CON FONDOS DIFERENTES */
+/* Fondo de bienvenida */
+.fondobienve {
+    background-image: url('../img/fondo.PNG');
+}
+/* Fondo recomendaciones */
+.fondoremon {
+    background-image: url('../img/fondorecomen.png');
+}
+/* Fondo universidades */
+.fondouni {
+    background-image: url('../img/fondouni.png');
+}
+/* Fondo formulario */
+.fondoformu {
+    background-image: url('../img/fondoformu.png');
+}
+/* Fondo genérico para todas las secciones con imagen */
+.fondobienve,
+.fondoremon,
+.fondouni,
+.fondoformu {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 60px 20px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+/* Alturas específicas para desktop */
+.fondobienve { height: 50vh; }
+.fondoremon,
+.fondouni,
+.fondoformu { min-height: 100vh; }
+
+/* Contenido centrado */
+.enfrente {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Título principal */
+.letrasbienve {
+    font-size: 29px;
+    color: #000000;
+    margin-bottom: 4px;
+    font-weight: 1000;
+    text-align: left;
+}
+/* Párrafo debajo del título */
+.parrafo {
+    font-size: 24px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    text-align: left;
+    color: #747470;
+}
+/* Áreas de selección */
+.areas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.section {
+    background-color: #5794E4;
+    border-radius: 10px;
+    height: 260px;
+    width: 210px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.section:hover {
+    background-color: #0B274B;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.section p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+.img1 {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 25px;
+}
+/* Sección negra decorativa */
+.seccion-negro {
+    background-color: #000000;
+    height: 40vh;
+    width: 100%;
+    padding: 80px 20px;
+    z-index: 0;
+}
+/* MEDIA QUERIES PARA RESPONSIVIDAD */
+/* Tablets */
+@media screen and (max-width: 992px) {
+    .letrasbienve {
+        font-size: 24px;
+        text-align: center;
+    }
+    .parrafo {
+        font-size: 20px;
+        text-align: center;
+    }
+    .section {
+        height: 220px;
+        width: 180px;
+    }
+    .section p {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .img1 {
+        max-width: 120px;
+    }
+    .fondobienve,
+    .fondoremon,
+    .fondouni,
+    .fondoformu {
+        height: auto;
+        min-height: unset;
+        padding: 40px 15px;
+        background-attachment: scroll; /* Mejora rendimiento en móviles */
+    }
+    .seccion-negro {
+        height: auto;
+        padding: 60px 15px;
+    }
+}
+/* Celulares */
+@media screen and (max-width: 576px) {
+    .letrasbienve {
+        font-size: 20px;
+        text-align: center;
+    }
+    .parrafo {
+        font-size: 16px;
+        text-align: center;
+    }
+    .areas {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+    .section p {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .img1 {
+        max-width: 100px;
+    }
+    .fondobienve,
+    .fondoremon,
+    .fondouni,
+    .fondoformu {
+        padding: 30px 10px;
+        background-attachment: scroll;
+    }
+    .enfrente {
+        padding: 0 10px;
+    }
+    .seccion-negro {
+        padding: 40px 10px;
+        height: auto;
+    }
+}

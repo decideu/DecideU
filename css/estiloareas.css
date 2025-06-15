@@ -1,0 +1,212 @@
+/* 
+  Decide U
+  Areas css
+  Guerrero Castro Blanca Teresita
+  Cibrian Castro Ana Cristina
+  Vega Escalante Romina
+  Última actualización: 14/06/2025
+*/
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Mejora el cálculo de tamaños */
+}
+/* Título principal */
+.tituloarea {
+    font-size: 35px;
+    color: #000000;
+    font-weight: 1000;
+    text-align: left;
+}
+/* Párrafo descriptivo */
+.paarea {
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+    color: #6d6a6a;
+}
+/* Contenedor del cuestionario */
+.contenido-cuestionario {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    color: #000;
+    text-align: center;
+}
+/* Pregunta */
+.pregunta {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+/* Opciones */
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+.opciones label {
+    background: #eef1f7;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.opciones label:hover {
+    background: #dbe4f0;
+}
+/* Navegación entre preguntas */
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.navigacion button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4f46e5;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.navigacion button:disabled {
+    background-color: #b0b3c5;
+    cursor: not-allowed;
+}
+.navigacion button:hover:not(:disabled) {
+    background-color: #4338ca;
+}
+/* Resultado final del test */
+.contenidoresultados {
+    background: white;
+    padding: 5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 2rem auto;
+    color: #000;
+}
+/* Título */
+h2 {
+    text-align: center;
+}
+/* Lista de resultados */
+ul {
+    padding: 0;
+    list-style: none;
+}
+li {
+    margin: 10px 0;
+    background: #eef1f7;
+    padding: 10px;
+    border-radius: 8px;
+}
+/* Botón con ícono */
+.botone {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #0B274B;
+    transition: transform 0.2s, color 0.2s;
+}
+.botone:hover {
+    transform: scale(0.8);
+    color: #5794E4;
+}
+.botone:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+/* Imagen relacionada a la pregunta */
+.imagen-pregunta {
+    text-align: center;
+    margin: 15px 0;
+}
+.imagen-pregunta img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+/* Responsivo */
+/* Tablet y menores */
+@media screen and (max-width: 768px) {
+    .tituloarea {
+        font-size: 28px;
+        text-align: center;
+    }
+    .paarea {
+        font-size: 18px;
+        text-align: center;
+    }
+    .contenido-cuestionario {
+        padding: 1.5rem;
+    }
+    .pregunta {
+        font-size: 1rem;
+    }
+    .opciones label {
+        font-size: 0.95rem;
+    }
+    .navegacion {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .navigacion button {
+        width: 100%;
+        font-size: 16px;
+    }
+    .contenidoresultados {
+        padding: 2rem;
+    }
+    .botone {
+        font-size: 20px;
+    }
+}
+/* Celulares pequeños (≤480px) */
+@media screen and (max-width: 480px) {
+    .tituloarea {
+        font-size: 24px;
+    }
+    .paarea {
+        font-size: 16px;
+    }
+    .contenido-cuestionario {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .pregunta {
+        font-size: 0.95rem;
+    }
+    .opciones label {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    .contenidoresultados {
+        padding: 1.5rem;
+    }
+    .botone {
+        font-size: 18px;
+    }
+    li {
+        font-size: 14px;
+    }
+}

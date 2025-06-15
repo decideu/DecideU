@@ -1,0 +1,162 @@
+/* 
+  Decide U
+  Recomendaciones css
+  Guerrero Castro Blanca Teresita
+  Cibrian Castro Ana Cristina
+  Vega Escalante Romina
+  Última actualización: 14/06/2025
+*/
+/* Reset y fuente base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+/* Fondo general */
+body {
+    background-color: #f4f4f4;
+}
+/* Contenedor principal con grid */
+.container {
+    display: grid;
+    grid-template-columns: 250px 1.2fr;
+    gap: 40px;
+    min-height: calc(100vh - 80px);
+    padding: 20px;
+    text-align: left;
+}
+/* Barra lateral */
+.sidebar {
+    background-color: transparent;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+/* Título de la barra lateral */
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+/* Botones del menú */
+.sidebar button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.sidebar button:hover {
+    background-color: #0056b3;
+}
+/* Sección principal */
+.main {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    max-width: 900px;
+}
+/* Títulos */
+.main h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+#recomendaciones h2 {
+    color: #d35400;
+    font-weight: bold;
+}
+.main h3 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+/* Párrafos y listas */
+.main p,
+.main ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+/* Botón dentro de contenido */
+.main a.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.main a.button:hover {
+    background-color: #218838;
+}
+/* Alerta de advertencia */
+.alerta {
+    background-color: #979696;
+    border: 1px solid #cc0000;
+    padding: 15px;
+    border-radius: 8px;
+    color: #990000;
+    font-family: Arial, sans-serif;
+}
+.alerta ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+/* RESPONSIVIDAD */
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        padding: 20px;
+    }
+    .main {
+        max-width: 100%;
+        padding: 30px;
+    }
+}
+/* Teléfonos móviles */
+@media (max-width: 600px) {
+    .sidebar {
+        padding: 15px;
+        box-shadow: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .sidebar h2 {
+        font-size: 1rem;
+    }
+    .sidebar button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+    .main {
+        padding: 20px;
+    }
+    .main h1 {
+        font-size: 1.5rem;
+    }
+    .main h3 {
+        font-size: 1rem;
+    }
+    .main p,
+    .main ul li {
+        font-size: 0.95rem;
+    }
+    .main a.button {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+}
