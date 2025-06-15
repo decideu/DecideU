@@ -5,6 +5,7 @@
     Cibrian Castro Ana Cristina
     Vega Escalante Romina
     Última actualización: 14/06/2025
+    
 -->
 <?php 
 //Inicia sesion para almacenar progreso
